@@ -1,4 +1,4 @@
-const backendUrl = "192.168.0.108:3000"
+const backendUrl = "172.105.67.251:3000"
 
 let playerID = ""
 let gameID = ""
