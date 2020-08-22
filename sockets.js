@@ -21,7 +21,7 @@ function joinGame() {
             }
         }
 
-        xhr.open("POST", "http://" + backendUrl + "/get_game", true);
+        xhr.open("POST", backendUrl + "/get_game", true);
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.send(JSON.stringify({
             playerID: playerID
@@ -30,7 +30,7 @@ function joinGame() {
 }
 
 function connectSockets() {
-    ws = new WebSocket("ws://" + backendUrl)
+    ws = new WebSocket("ws://172.105.67.251:3000")
 
     ws.onopen = function(event) {
         setConnectionStatus(true)
@@ -125,7 +125,7 @@ function sendTurn(turn) {
         }
     }
 
-    xhr.open("POST", "http://" + backendUrl + "/make_turn", true);
+    xhr.open("POST", backendUrl + "/make_turn", true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(JSON.stringify({
         playerID: playerID,

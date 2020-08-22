@@ -1,4 +1,11 @@
-const backendUrl = "172.105.67.251:3000"
+const localServer = false;
+var backendUrl = "https://api.matejtarca.me"
+
+if (localServer) {
+    backendUrl = "localhost:3000"
+}
+
+console.log(backendUrl)
 
 let playerID = ""
 let gameID = ""
