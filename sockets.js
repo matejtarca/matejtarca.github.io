@@ -30,7 +30,7 @@ function joinGame() {
 }
 
 function connectSockets() {
-    ws = new WebSocket("ws://172.105.67.251:3000")
+    ws = new WebSocket("ws://api.matejtarca.me")
 
     ws.onopen = function(event) {
         setConnectionStatus(true)
